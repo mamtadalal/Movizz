@@ -8,7 +8,7 @@
 <script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
 <script src="https://cdn.firebase.com/libs/firebase-util/0.2.5/firebase-util.min.js"></script>
 <meta charset="utf-8">
-<title>Cinema DB</title>
+<title>Cinema and TV Catalogue</title>
 </head>
 <!-- reference the controller for this example -->
 <script src="http://mamtadalal.github.io/Movizz/controller.js"></script> 
@@ -17,14 +17,10 @@
 <body ng-controller="CineDBCtrl" style="padding:10px 5px 15px 40px;">
 <table style="box-shadow: 2px 2px 2px #111C9E; border-radius:10px; background-color:#ffffe8; width:780px; height:300px;border-collapse:collapse;">
 <tr><td style="vertical-align:top; text-align:center;">
-  <b>CineDB >> TV Shows</b>
-  <hr/>
+<h1>Cinema and TV Catalogue</h1>
   </td></tr>
   <!-- second row of outer table-->
   <tr><td style="padding:20px; vertical-align:top; text-align:left;-webkit-column-width: 400px; -moz-column-width: 400px; column-width:400px;">
-
-<h4>Page {{ pageItems.currentPageNumber }}</h4>
-
 <div ng-repeat="item in pageItems">
 <br>
 <br>
@@ -39,6 +35,7 @@
 </div>
 </div>
 <p>
+  <h4>Page {{ pageItems.currentPageNumber }}</h4>
     <button class="btn btn-primary"
             ng-click="pageItems.page.setPage(1)"
             ng-disabled="pageItems.currentPageNumber < 2">
