@@ -44,7 +44,7 @@ app.factory('$pageArray1', function($firebaseArray) {
 // Function that performs pagination of shows
 app.factory('$pageArray', function($firebaseArray) {
   return function(ref, field) {
-    var pageRef = new Firebase.util.Paginate(ref, field, {pageSize: 3});
+    var pageRef = new Firebase.util.Paginate(ref, field, {pageSize: 2});
     var list = $firebaseArray(pageRef);
     list.page = pageRef.page;
     pageRef.page.onPageCount(function(currentPageCount, couldHaveMore) {
